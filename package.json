@@ -1,0 +1,39 @@
+{
+  "name": "eslint-plugin-wxml",
+  "version": "0.7.5",
+  "description": "eslint plugin for wxml",
+  "main": "lib/index.js",
+  "type": "commonjs",
+  "author": "iChenLei <chenleicoder@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wxmlfile/eslint-plugin-wxml.git"
+  },
+  "keywords": [
+    "wxml",
+    "eslint",
+    "plugin",
+    "wechat",
+    "miniprogram"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "npm run format && npm run test",
+    "format": "prettier  \"./lib\" \"./tests\" \"./tools\" --write ",
+    "test": "mocha \"tests/**/*.js\" --reporter dot"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0 || ^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "@wxml/parser": "^0.4.0"
+  }
+}
